@@ -26,6 +26,7 @@ function App() {
   const [showSave, setShowSave] = React.useState(false)
   const [inputVal, setInputVal] = React.useState('')
   const [options, setOptions] = React.useState<WindowOption[]>([])
+
   React.useEffect(() => {
     chrome.storage.local.get(chromeStorageKey, (storageVal) => {
       const prevStorageVal = storageVal as ChromeStorage;
