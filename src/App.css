@@ -1,38 +1,132 @@
 .App {
   text-align: center;
+  min-width: 220px;
+  padding: 5px;
+  display: flex;
+  background-color: #36373F;
+  color: white;
+  animation: fadeIn 0.8s ease-in-out;
+  font-size: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.leftSvg {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:focus {
+  outline: none;
+}
+
+.windowOptions {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 5px;
+  min-height: 60px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #22202D;
+}
+
+.optionLeft {
+  display: flex;
+  flex: 1;
+}
+
+.optionName {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.optionSize {
+  font-style: italic;
+}
+
+.deleteOption {
+  padding-left: 5px;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.saveView {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.buttonContainer {
+  padding-top: 20px;
+}
+
+.buttonGroup {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input {
+  padding: 10px;
+  margin: 20px auto;
+  padding: 10px 5px;
+  width: 80%;
+  border:none;
+  border-radius: 3px;
+  background-color: #54586D;
+  color:white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.input:focus {
+  outline: none;
+}
+
+.saveSvg {
+  font-size: 15px;
+}
+
+.cancelButton {
+  margin-left: 5px;
+}
+
+button {
+  background-color: transparent;
+  font-size: 14px;
+  color:white;
+  transition: all 0.2s linear;
+}
+
+button:hover {
+  background-color: #22202D;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    background-color: white;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-color: #36373F;
   }
 }
